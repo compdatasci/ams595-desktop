@@ -13,9 +13,7 @@ before_script:
   - git clone --depth=1 https://$GIT_TOKEN@github.com/xmjiao/ci-util.git 2> /dev/null
 
 script:
-  - './ci-util/build-docker.sh : ams595/desktop:$VERSION,$TRAVIS_BRANCH,latest --squash &&
-     ./ams595_desktop.py -t $TRAVIS_BRANCH -d -n -V && docker stop $(docker ps -q) &&
-     ./ams595_jupyter.py -t $TRAVIS_BRANCH -d -n -V && docker stop $(docker ps -q)'
+  - './ci-util/build-docker.sh : ams595/desktop:$VERSION,$TRAVIS_BRANCH,latest --squash
 
 after_success:
   - ./ci-util/trigger-via-api.sh
