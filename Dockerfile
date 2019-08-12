@@ -10,8 +10,6 @@ LABEL maintainer "Xiangmin Jiao <xmjiao@gmail.com>"
 USER root
 WORKDIR /tmp
 
-ARG OCTAVE_VERSION=4.2.1
-
 # Install system packages and Octave
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -30,6 +28,10 @@ RUN apt-get update && \
         imagemagick \
         \
         gnuplot-x11 \
+        ghostscript \
+        fig2dev \
+        epstool \
+        pstoedit \
         libopenblas-base \
         \
         octave \
@@ -61,7 +63,8 @@ RUN apt-get update && \
         libomp-dev \
         openmpi-bin libopenmpi-dev \
         \
-        meld && \
+        meld \
+        diffuse && \
     apt-get clean && \
     apt-get autoremove && \
     curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash && \
