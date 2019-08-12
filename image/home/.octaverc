@@ -1,0 +1,4 @@
+# Use fltk instead of qt for remote display
+if ~isempty(getenv('DISPLAY')) && getenv('DISPLAY')(1) != ':'
+    graphics_toolkit("fltk");
+endif
