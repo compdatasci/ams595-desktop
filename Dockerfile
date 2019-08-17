@@ -73,6 +73,7 @@ RUN apt-get update && \
         scipy \
         sympy \
         pandas \
+        numpydoc \
         matplotlib \
         autopep8 \
         flake8 \
