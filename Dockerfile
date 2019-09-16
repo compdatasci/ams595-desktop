@@ -4,7 +4,7 @@
 # Authors:
 # Xiangmin Jiao <xmjiao@gmail.com>
 
-FROM compdatasci/vscode-desktop:latest
+FROM compdatasci/vscode-desktop:next
 LABEL maintainer "Xiangmin Jiao <xmjiao@gmail.com>"
 
 USER root
