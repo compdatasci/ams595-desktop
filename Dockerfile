@@ -68,6 +68,7 @@ RUN apt-get update && \
     apt-get clean && \
     apt-get autoremove && \
     curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash && \
+    pip3 install -U pip3 && \
     pip3 install -U \
         numpy \
         scipy \
@@ -77,7 +78,7 @@ RUN apt-get update && \
         matplotlib \
         autopep8 \
         flake8 \
-        PyQt5 \
+        pyqt5 \
         ipython \
         jupyter \
         ipywidgets \
