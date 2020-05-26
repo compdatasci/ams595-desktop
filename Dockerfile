@@ -41,8 +41,6 @@ RUN apt-get update && \
         octave-parallel \
         octave-struct \
         \
-        python3-pip \
-        python3-dev \
         pandoc \
         ttf-dejavu \
         git \
@@ -68,7 +66,6 @@ RUN apt-get update && \
     apt-get clean && \
     apt-get autoremove && \
     curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash && \
-    pip3 install -U pip3 && \
     pip3 install -U \
         numpy \
         scipy \
