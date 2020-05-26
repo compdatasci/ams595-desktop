@@ -75,7 +75,7 @@ RUN apt-get update && \
         matplotlib \
         autopep8 \
         flake8 \
-        pyqt5 \
+        pyqt5==5.14.0 \
         ipython \
         jupyter \
         ipywidgets \
