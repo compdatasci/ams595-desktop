@@ -5,7 +5,7 @@ services: docker
 
 env:
   global:
-    - VERSION=19F
+    - VERSION=20F
 
 before_script:
   - sudo echo '{"experimental":true}' | sudo tee /etc/docker/daemon.json
